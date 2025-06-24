@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 01</title>
+</head>
+<body>
+    <h1>1.  Thẻ tiêu đề</h1>
+    <h1>Tiêu đề chính</h1>
+    <h2>Tiêu đề phụ</h2>
+    <h3>Tiêu đề cấp 3</h3>
+    <h4>Tiêu đề cấp 4</h4>
+    <h5>Tiêu đề cấp 5</h5>
+    <h6>Tiêu đề cấp 6</h6>
+
+    <h1>2.  Thẻ đoạn văn bản</h1>
+
+    <p>Nội dung văn bản theo đoạn. Thẻ span dùng để định nghĩa những đoạn văn bản nhỏ trong một văn bản lớn, tương lai sẽ giúp điều chỉnh các 'style' của một nội dung nhỏ</p>
+
+    <h1>3. Thẻ phân chia nội dung văn bản</h1>
+    <p>Nội dung <span style="text-decoration:underline;">văn bản theo đoạn</span>. Thẻ span dùng để định nghĩa những đoạn văn bản nhỏ trong một văn bản lớn, tương lai sẽ giúp điều chỉnh các 'style' của một nội dung nhỏ</p>
+    <span>Nội dung văn bản ngắn</span>
+    <hr>
+
+    <h1>4. Thẻ tạo liên kết</h1>
+
+    <a href="https://mindxschool.gitbook.io/c4e">Đường dẫn đến bài học số 1</a>
+
+    <h1>5. Nhóm thẻ định dạng văn bản (style tags)</h1>
+    <b>Thẻ b: Làm cho văn bản đậm, nhưng không có ý nghĩa ngữ nghĩa. Chỉ dùng để nhấn mạnh.</b>
+    <br/>
+    <i>Thẻ i: Làm cho văn bản nghiêng, nhưng không có ý nghĩa ngữ nghĩa. Chỉ dùng để nhấn mạnh.</i>
+    <br/>
+    <u>Thẻ u: Làm cho văn bản gạch chân, nhưng không có ý nghĩa ngữ nghĩa. Chỉ dùng để nhấn mạnh.</u>
+    <br/>
+    <strong>Thẻ strong: Làm cho văn bản đậm và có ý nghĩa ngữ nghĩa, thể hiện tầm quan trọng.</strong>
+    <br/>
+    <em>Thẻ em: Làm cho văn bản nghiêng và có ý nghĩa ngữ nghĩa, thể hiện tầm quan trọng.</em>
+
+    <p>Hôm nay là buổi học <b>đầu tiên</b> của lớp <b><i>C4EJS159</i></b>.</p>
+
+    <b>Hôm nay trời đẹp <u>gạch chân cái rồi <i>in nghiêng</i></u></b>
+
+    <h1>6. Thẻ tạo danh sách (list tags)</h1>
+    <p>ul: Danh sách không có thứ tự (unordered list), các mục được đánh dấu bằng dấu chấm tròn hoặc biểu tượng tùy chỉnh.</p>
+    <p>ol: Danh sách có thứ tự (ordered list), các mục được đánh số hoặc ký tự theo thứ tự.</p>
+    <p>li: Mục danh sách (list item), dùng bên trong ul hoặc ol để tạo các mục trong danh sách.</p>
+
+    <ul>
+        <li>Danh sách không có thứ tự 1</li>
+        <li>Danh sách không có thứ tự 2</li>
+        <li>Danh sách không có thứ tự 3</li>
+    </ul>
+
+    <ol>
+        <li>Danh sách có thứ tự 1</li>
+        <li>Danh sách có thứ tự 2</li>
+        <li>Danh sách có thứ tự 3</li>
+    </ol>
+    
+    <h1>7. Nhóm thẻ media</h1>
+    <p>img: Sử dụng để hiển thị một hình ảnh ra giao diện khi được cung cấp đường dẫn tới hình ảnh đó.</p>
+    <img src="https://n7media.coolmate.me/uploads/June2025/Polo12.jpg?aio=w-672" alt="Đây là hình ảnh của trường MindX">
+
+    <p>video: Nhúng video vào trang web. Có thể dùng thêm các thuộc tính như controls, autoplay, loop</p>
+    <video style="max-width: 50%;" src="https://cdn.pixabay.com/video/2025/03/23/266987_large.mp4" controls autoplay loop></video>
+
+    <p>audio: Sử dụng để nhúng và phát đoạn âm thanh</p>
+    <audio src="/lesson_01/rumo-ao-sol-13162.mp3" controls></audio>
+
+    <h1>8. Bảng</h1>
+    <table border="1" style="border-collapse: collapse; width: 100%;">
+        <thead>
+            <th>STT</th>
+            <th>Họ tên</th>
+            <th>Lớp</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Nguyễn Văn A</td>
+                <td>Web Fullstack</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nguyễn Văn B</td>
+                <td>Web Fullstack</td> 
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Nguyễn Văn C</td>
+                <td>Web Fullstack</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>9. Form</h1>
+    <form action="">
+        <input placeholder="Nhập email"/>  <!-- Hiển thị ô nhập dữ liệu. -->
+        <input type="text" placeholder="Email address or phone number"/> <!-- Hiển thị ô nhập dữ liệu, định nghĩa là chữ, có dòng chữ mờ 'Email address or phone number' -->
+
+        <br>
+
+        <input type="radio" name="gender" value="male" /> Male
+        <input type="radio" name="gender" value="female" /> Female
+        <input type="radio" name="gender" value="other" /> Other
+        <!-- Hiển thị các nút chọn, định nghĩa là lựa chọn (radio button) cho giới tính, với các tùy chọn 'Male' và 'Female' -->
+
+        <br>
+
+        <input type="checkbox" name="subscribe" /> Subscribe to newsletter
+        <input type="checkbox" name="subscribe" /> Subscribe to newsletter
+        <input type="checkbox" name="subscribe" /> Subscribe to newsletter
+        <!-- Hiển thị ô chọn, định nghĩa là checkbox để đăng ký nhận bản tin -->
+
+        <br>
+
+        <input type="number" placeholder="Enter your age" />
+        <!-- Hiển thị ô nhập dữ liệu, định nghĩa là số, có dòng chữ mờ 'Enter your age' -->
+
+        <br>
+
+        <input type="date" />
+        <!-- Hiển thị ô nhập dữ liệu, định nghĩa là ngày tháng -->
+
+        <br>
+
+        <input type="email" placeholder="Enter your email" />
+        <!-- Hiển thị ô nhập dữ liệu, định nghĩa là email, có dòng chữ mờ 'Enter your email' -->
+
+        <br>
+
+        <input type="file" />
+        <!-- Hiển thị ô nhập dữ liệu, định nghĩa là tải tệp lên -->
+
+        <br>
+
+        <input type="range" min="0" max="100" />
+        <!-- Hiển thị thanh trượt, định nghĩa là dải (range) với giá trị từ 0 đến 100 -->
+
+        <br>
+
+        <input type="color" />
+        <!-- Hiển thị ô chọn màu, định nghĩa là màu sắc -->
+
+        <br>
+
+        <input type="search" placeholder="Search..." />
+        <!-- Hiển thị ô nhập dữ liệu, định nghĩa là tìm kiếm, có dòng chữ mờ 'Search...' -->
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
