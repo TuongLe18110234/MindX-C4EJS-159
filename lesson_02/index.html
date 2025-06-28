@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lesson 2: CSS</title>
+
+    <style>
+        * {
+            font-size: 20px;
+        }
+        p {
+            color: navy !important; 
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        a {
+            color: green;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .text-selector-red {
+            color: red;
+        }
+
+        .text-selector-blue {
+            color: blue;
+        }
+
+        .secondary-size {
+            font-size: 18px;
+        }
+
+        p.secondary-size {
+            font-size: 25px;
+        }
+
+        #selector-p-id {
+            color: orange;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        p {
+            color: navy; 
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        p {
+            color: rgb(34, 207, 11); 
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Lesson 2: CSS</h1>
+
+    <h2>1. In line CSS</h2>
+    <p style="color: red; text-decoration: underline; font-weight: bold; font-size: 15px;">Xin chào MindX</p>
+
+    <h2>2. Internal CSS</h2>
+    <p>Đây là lớp C4EJS159</p>
+    <p>Rất vui được gặp bạn!</p>
+
+    <h2>3. External CSS</h2>
+    <a>Xin chào Student!</a>
+
+    <h2>4. Selector By Class</h2>
+    <p>Học về selector</p>
+    <p class="text-selector-red">Selector theo class 1</p>
+    <p class="text-selector-red">Selector theo class 2</p>
+    <p class="text-selector-blue secondary-size">Selector theo class 3</p>
+    <h3 class="text-selector-red secondary-size">Secondary header</h3>
+
+    <h2>5. Selector By Id</h2>
+    <p style="color: bisque;" id="selector-p-id">Học selector theo ID</p>
+    <p id="selector-p-id" class="text-selector-red">Học selector theo ID</p>
+    <p class="text-selector-red">Học selector theo ID</p>
+</body>
+</html>
