@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 2: CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2 {
+      color: #c0392b;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1c40f;
+    }
+    tr:nth-child(even) {
+      background-color: #fdfdfd;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎯 Bài tập Lesson 2: Thuộc tính CSS</h1>
+
+  <h2>Phần 1: 15 Thuộc tính CSS thường dùng</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Thuộc tính</th>
+        <th>Tác dụng</th>
+        <th>Giá trị phổ biến</th>
+        <th>Ví dụ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>color</td>
+        <td>Màu chữ</td>
+        <td>red, #ff0000, rgb(255,0,0)</td>
+        <td><code>&lt;p style="color: red;"&gt;Text&lt;/p&gt;</code></td>
+      </tr>
+      <tr>
+        <td>background-color</td>
+        <td>Màu nền</td>
+        <td>blue, #0000ff</td>
+        <td><code>&lt;div style="background-color: blue;"&gt;Box&lt;/div&gt;</code></td>
+      </tr>
+      <tr>
+        <td>font-size</td>
+        <td>Cỡ chữ</td>
+        <td>16px, 1.5em, 120%</td>
+        <td><code>&lt;p style="font-size: 16px;"&gt;Text&lt;/p&gt;</code></td>
+      </tr>
+      <tr>
+        <td>font-weight</td>
+        <td>Độ đậm chữ</td>
+        <td>normal, bold, 700</td>
+        <td><code>&lt;b style="font-weight: bold;"&gt;Bold&lt;/b&gt;</code></td>
+      </tr>
+      <tr>
+        <td>text-align</td>
+        <td>Căn chỉnh văn bản</td>
+        <td>left, center, right</td>
+        <td><code>&lt;p style="text-align: center;"&gt;Text&lt;/p&gt;</code></td>
+      </tr>
+      <tr>
+        <td>margin</td>
+        <td>Khoảng cách ngoài</td>
+        <td>10px, 0 auto</td>
+        <td><code>&lt;div style="margin: 20px;"&gt;&lt;/div&gt;</code></td>
+      </tr>
+      <tr>
+        <td>padding</td>
+        <td>Khoảng cách bên trong</td>
+        <td>10px 15px</td>
+        <td><code>&lt;div style="padding: 10px;"&gt;&lt;/div&gt;</code></td>
+      </tr>
+      <tr>
+        <td>border</td>
+        <td>Đường viền</td>
+        <td>1px solid black</td>
+        <td><code>&lt;div style="border: 1px solid black;"&gt;&lt;/div&gt;</code></td>
+      </tr>
+      <tr>
+        <td>width</td>
+        <td>Chiều rộng</td>
+        <td>100px, 50%</td>
+        <td><code>&lt;div style="width: 200px;"&gt;&lt;/div&gt;</code></td>
+      </tr>
+      <tr>
+        <td>height</td>
+        <td>Chiều cao</td>
+        <td>100px, auto</td>
+        <td><code>&lt;div style="height: 100px;"&gt;&lt;/div&gt;</code></td>
+      </tr>
+      <tr>
+        <td>display</td>
+        <td>Cách hiển thị</td>
+        <td>block, inline, flex</td>
+        <td><code>&lt;div style="display: flex;"&gt;&lt;/div&gt;</code></td>
+      </tr>
+      <tr>
+        <td>position</td>
+        <td>Vị trí</td>
+        <td>static, relative, absolute</td>
+        <td><code>&lt;div style="position: relative;"&gt;&lt;/div&gt;</code></td>
+      </tr>
+      <tr>
+        <td>z-index</td>
+        <td>Thứ tự chồng lớp</td>
+        <td>1, 10, 999</td>
+        <td><code>&lt;div style="z-index: 2;"&gt;&lt;/div&gt;</code></td>
+      </tr>
+      <tr>
+        <td>overflow</td>
+        <td>Xử lý tràn nội dung</td>
+        <td>hidden, scroll, auto</td>
+        <td><code>&lt;div style="overflow: hidden;"&gt;&lt;/div&gt;</code></td>
+      </tr>
+      <tr>
+        <td>cursor</td>
+        <td>Kiểu con trỏ</td>
+        <td>pointer, default</td>
+        <td><code>&lt;button style="cursor: pointer;"&gt;Click&lt;/button&gt;</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Phần 2: Phân tích giao diện Shopee</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Khu vực</th>
+        <th>Thuộc tính CSS</th>
+        <th>Giá trị áp dụng</th>
+        <th>Mô tả</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Header</td>
+        <td>background-color</td>
+        <td>#ee4d2d</td>
+        <td>Màu cam thương hiệu Shopee</td>
+      </tr>
+      <tr>
+        <td>Header</td>
+        <td>position</td>
+        <td>fixed</td>
+        <td>Giữ cố định khi cuộn</td>
+      </tr>
+      <tr>
+        <td>Logo</td>
+        <td>width</td>
+        <td>100px</td>
+        <td>Kích thước logo</td>
+      </tr>
+      <tr>
+        <td>Menu</td>
+        <td>display</td>
+        <td>flex</td>
+        <td>Hiển thị menu ngang</td>
+      </tr>
+      <tr>
+        <td>Menu item</td>
+        <td>padding</td>
+        <td>10px 15px</td>
+        <td>Tạo khoảng cách đều</td>
+      </tr>
+      <tr>
+        <td>Search box</td>
+        <td>border-radius</td>
+        <td>4px</td>
+        <td>Bo tròn góc ô tìm kiếm</td>
+      </tr>
+      <tr>
+        <td>Nút tìm kiếm</td>
+        <td>background-color</td>
+        <td>#f53d2d</td>
+        <td>Màu nền nút</td>
+      </tr>
+      <tr>
+        <td>Banner</td>
+        <td>width</td>
+        <td>100%</td>
+        <td>Chiếm toàn bộ chiều ngang</td>
+      </tr>
+      <tr>
+        <td>Banner</td>
+        <td>overflow</td>
+        <td>hidden</td>
+        <td>Ẩn nội dung tràn</td>
+      </tr>
+      <tr>
+        <td>Sản phẩm</td>
+        <td>border</td>
+        <td>1px solid #f0f0f0</td>
+        <td>Viền mảnh</td>
+      </tr>
+      <tr>
+        <td>Sản phẩm</td>
+        <td>box-shadow</td>
+        <td>0 1px 3px rgba(0,0,0,0.1)</td>
+        <td>Tạo bóng nhẹ</td>
+      </tr>
+      <tr>
+        <td>Tên sản phẩm</td>
+        <td>font-size</td>
+        <td>14px</td>
+        <td>Cỡ chữ nhỏ gọn</td>
+      </tr>
+      <tr>
+        <td>Giá sản phẩm</td>
+        <td>color</td>
+        <td>#ee4d2d</td>
+        <td>Đồng bộ màu thương hiệu</td>
+      </tr>
+      <tr>
+        <td>Grid sản phẩm</td>
+        <td>grid-template-columns</td>
+        <td>repeat(5, 1fr)</td>
+        <td>Dạng lưới 5 cột</td>
+      </tr>
+      <tr>
+        <td>Hover sản phẩm</td>
+        <td>transform</td>
+        <td>scale(1.02)</td>
+        <td>Hiệu ứng phóng to nhẹ</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>Link tham khảo:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN CSS Reference</a></p>
+
+</body>
+</html>
