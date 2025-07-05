@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-color: white;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Phần nền đen phía dưới */
+    .dark-section {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      background-color: #322c2d;
+    }
+
+    /* Khối bo tròn nằm giữa */
+    .rounded-box {
+      position: absolute;
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      background-color: #edd9c2;
+      width: 600px;
+      height: 100px;
+      border-radius: 50px;
+      z-index: 2;
+    }
+
+    /* Ảnh tròn */
+    .circle-image-wrapper {
+      position: absolute;
+      top: 50px;
+      right: 100px;
+      z-index: 3;
+    }
+
+    .circle-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: -50px;
+      /* tạo hiệu ứng chồng lên */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .circle-image-1 {
+      width: 210px;
+      height: 210px;
+    }
+
+    .circle-image-2 {
+      margin-left: 20px;
+    }
+
+    .circle-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* MODAL STYLES */
+    .modal {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(2px);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      width: 400px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+      position: relative;
+      text-align: center;
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 16px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #555;
+    }
+
+    .modal-image {
+      width: 100%;
+      height: 120px;
+      background-color: #e3e3e3;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .modal h2 {
+      margin: 0 0 6px;
+      font-size: 20px;
+    }
+
+    .modal p {
+      margin-bottom: 18px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    .modal input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-bottom: 18px;
+    }
+
+    .submit-btn {
+      padding: 12px 0;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      background-color: #3c3939;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #2e2b2b;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Ảnh tròn -->
+    <div class="circle-image-wrapper">
+      <div class="circle-image circle-image-1">
+        <img src="./cafe-1.png" alt="Coffee 1" />
+      </div>
+      <div class="circle-image circle-image-2">
+        <img src="./cafe-2.png" alt="Coffee 2" />
+      </div>
+    </div>
+
+    <!-- Khối bo tròn nằm giữa -->
+    <div class="container">
+      <div class="rounded-box" onclick="openModal()"> </div>
+    </div>
+
+    <!-- Nền đen phía dưới -->
+    <div class="dark-section"></div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="feedbackModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+
+      <!-- Ảnh -->
+      <div class="modal-image">
+      </div>
+
+      <!-- Nội dung -->
+      <h2>Send feedback!</h2>
+      <p>Leave your feedback here.</p>
+
+      <!-- Input -->
+      <input type="text" placeholder="Type text..." />
+
+      <!-- Button -->
+      <button class="submit-btn">Yeah, thanks!</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("feedbackModal").style.display = "flex";
+    }
+
+    function closeModal() {
+      document.getElementById("feedbackModal").style.display = "none";
+    }
+
+    window.onclick = function (e) {
+      const modal = document.getElementById("feedbackModal");
+      if (e.target === modal) closeModal();
+    }
+  </script>
+</body>
+
+</html>
