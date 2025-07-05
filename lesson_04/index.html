@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4: Layout</title>
+
+    <style>
+        /* 1. Display */
+        .display-block {
+            display: block;
+            border: 2px solid blue;
+            /* width: 100%; */
+            height: 30px;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        .display-inline {
+            display: inline;
+            border: 2px solid red;
+            width: 100px;
+            height: 30px;
+            margin: 10px;
+        }
+
+        .display-inline-block {
+            display: inline-block;
+            border: 2px solid green;
+            width: 150px;
+            height: 30px;
+            margin: 10px;
+        }
+
+        .display-none {
+            display: none;
+            border: 2px solid purple;
+            width: 100px;
+            height: 30px;
+            margin: 10px;
+        }
+
+        /* 2. Flexbox */
+        .box {
+            width: 50px;
+            height: 50px;
+            padding: 50px;
+            border: 10px solid black;
+            margin: 15px;
+        }
+
+        .flexbox-1 {
+            background-color: lightblue;
+        }
+
+        .flexbox-2 {
+            background-color: lightgreen;
+        }
+
+        .flexbox-3 {
+            background-color: lightcoral;
+        }
+
+        .flexbox {
+            display: flex;
+            flex-direction: row;
+            height: 300px;
+            border: 1px solid black;
+            /* flex-direction: row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse; */
+            /* justify-content: center; */
+            justify-content: flex-start;
+            /* justify-content: flex-end;
+            justify-content: space-between;
+            justify-content: space-around;
+            justify-content: space-evenly; */
+            align-items: flex-start;
+            /* align-items: center; */
+            /* align-items: flex-end;
+            align-items: center; */
+            flex-wrap: wrap;
+            flex-wrap: nowrap;
+        }
+
+        /* 3. Grid */
+        .grid-1 {
+            background-color: lightblue;
+        }
+
+        .grid-2 {
+            background-color: lightgreen;
+        }
+
+        .grid-3 {
+            background-color: lightcoral;
+        }   
+
+        .grid-4 {
+            background-color: lightgoldenrodyellow;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 300px 500px 200px;
+            /* grid-template-columns: auto auto auto; */
+            /* grid-template-columns: repeat(3, 1fr); */
+            /* grid-template-rows: repeat(1, 1fr); */ 
+            /* grid-template-rows: 200px 300px; */
+            /* Comment trong code
+               Tác dụng: Mô tả, giải thích, chú thích cho đoạn code
+               Không ảnh hưởng đến việc hiển thị của trang web
+               Ví dụ:
+               grid-template-rows: 200px 300px;
+               Tạo 2 hàng, hàng đầu cao 200px, hàng thứ hai cao 300px
+             */
+            grid-gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>1. Display</h1>
+    <div class="display-block">Block Element</div>
+    <div class="display-inline">Inline Element</div>
+    <div class="display-inline-block">Inline Block Element</div>
+    <div class="display-none">Non Element</div>
+
+    <h1>2. Flexbox</h1>
+    <div class="flexbox">
+        <div class="box flexbox-1">MindX Box 1</div>
+        <div class="box flexbox-2">MindX Box 2</div>
+        <div class="box flexbox-3">MindX Box 3</div>
+    </div>
+
+    <h1>3. Grid</h1>
+    <div class="grid">
+        <div class="box grid-1">MindX Grid 1</div>
+        <div class="box grid-2">MindX Grid 2</div>
+        <div class="box grid-3">MindX Grid 3</div>
+        <div class="box grid-4">MindX Grid 4</div>
+    </div>
+</body>
+</html>
