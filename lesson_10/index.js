@@ -146,3 +146,12 @@ function sum2(array) {
     return total;
 }
 console.log(sum2([1,2,3,4,5]));
+
+// // Wrong: multiple rest operator
+// const sum = (...first, ...second) => {...}
+
+// // Wrong: rest operator cannot be the first params
+// const sum = {...first, second, third} => {...}
+
+// // Correct
+// const sum = (first, second, ...third) => {...}
